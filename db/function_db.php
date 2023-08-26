@@ -40,21 +40,3 @@ function insertDataHotel($data)
         echo mysqli_error($conn);
     }
 }
-
-
-/**
- * Fungsi mengambil seluruh data hotel yang ada pada db.
- *
- * @return array array asosiatif berisi seluruh data hotel.
- */
-function getAllDataHotel()
-{
-    global $conn;
-    $query = "SELECT * FROM tb_hotel H
-              LEFT JOIN tb_kamar K ON H.id_kamar = K.id_kamar";
-    if (mysqli_query($conn, $query)) {
-        return mysqli_query($conn, $query);
-    } else {
-        echo mysqli_error($conn);
-    }
-}
