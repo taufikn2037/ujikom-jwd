@@ -24,7 +24,7 @@ $page = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 
                         Kami</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= $page == '' ? 'active' : ''; ?>" href="">Pesan Kamar</a>
+                    <a class="nav-link <?= $page == 'pesan.php' ? 'active' : ''; ?>" href="pesan.php">Pesan Kamar</a>
                 </li>
             </ul>
         </div>
